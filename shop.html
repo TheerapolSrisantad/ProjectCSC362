@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฟอร์มทำการสั่งซื้อร้านขายหนังสือการ์ตูน</title>
+    <link rel="stylesheet" href="Styles1.css">
+</head>
+<body>
+
+<h1>ฟอร์มทำการสั่งซื้อร้านขายหนังสือการ์ตูน</h1>
+
+<form action="https://sheetdb.io/api/v1/zeilqzqwmg2jg" method="post" id="shop-form" enctype="multipart/form-data">
+    <label for="name">ชื่อ - นามสกุล:</label>
+    <input type="text" id="name" name="name" placeholder="กรอกชื่อ-นามสกุล" required>
+
+    <label for="book">ชื่อหนังสือ:</label>
+    <textarea id="book" name="book" rows="4" style="width: 100%;" placeholder="กรอกชื่อหนังสือที่ต้องการซื้อ / 1 บรรทัด ต่อ1ชื่อ" required></textarea>
+
+    <label for="money_price">ราคา+ค่าจัดส่ง50บาท:</label>
+    <input type="text" id="money_price" name="money_price" placeholder="กรอกราคาหนังสือทั้งหมด+ค่าจัดส่ง50บาท" required>
+
+    <label for="phone_number">เบอร์โทร:</label>
+    <input type="text" id="phone_number" name="phone_number" placeholder="กรอกเบอร์โทรการติดต่อ" required>
+
+    <label for="address">ที่อยู่การจัดส่ง:</label>
+    <textarea id="address" name="address" rows="4" style="width: 100%;" placeholder="กรอกที่อยู่การจัดส่งสินค้า" required></textarea>
+
+    <h2>โอนเงินการสั่งซื้อ(เลือกบัญชีการโอน)</h2>
+    <ul>
+        <li>ธนาคาร กสิกรไทย</li>
+        <li>เลขที่บัญชี 1234567890</li>
+        <li>ชื่อ สมชาย ใจดี</li>
+        <li>ธนาคาร กรุงไทย</li>
+        <li>เลขที่บัญชี 0123456789</li>
+        <li>ชื่อ สมชาย ใจดี</li>
+    </ul>
+
+    <label for="date_money">วันที่จ่ายเงิน:</label>
+    <input type="date" id="date_money" name="date_money" required>
+
+    <label for="time_money">เวลาจ่ายเงิน:</label>
+    <input type="time" id="time_money" name="time_money">
+
+    <h2>ข้อกำหนดการสั่งซื้อ</h2>
+    <ul>
+        <li>กรุณาใส่ข้อมูลให้เรียบร้อย</li>
+        <li>ตรวจสอบข้อมูลให้ถูกต้อง</li>
+        <li>หากใส่ข้อมูลผิดทางร้านจะไม่รับผิดชอบต่อความเสียหายทั้งหมด</li>
+        <li>กรุณาเก็บสลิปการโอนเงินเพื่อเป็นหลักฐานการสั่ง</li>
+        <li>กรุณา@line : @ab123 เพื่อส่งสลิปการจ่ายเงิน</li>
+        <li>ชื่อในสลิปต้องเหมือนกับชื่อที่สั่งซื้อ</li>
+        <li>หากชื่อสลิปไม่ตรงกับชื่อที่ทำการสั่งซื้อให้แจ้งชื่อในline@พร้อมสลิปการโอนเงิน</li>
+    </ul>
+
+    <button type="submit">ทำการสั่งซื้อ</button>
+</form>
+
+<div id="form-message" style="display: none;"></div>
+
+<script>
+    var form = document.getElementById("shop-form");
+    var messageDiv = document.getElementById("form-message");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data) {
+                form.reset();
+                messageDiv.style.display = "block";
+                messageDiv.style.color = "green";
+                messageDiv.innerText = "ทำการบันทึกข้อมูลการสั่งซื้อแล้ว";
+            }
+        })
+        .catch((error) => {
+            console.error("ข้อผิดพลาด:", error);
+            messageDiv.style.display = "block";
+            messageDiv.style.color = "red";
+            messageDiv.innerText = "เกิดข้อผิดพลาดในการบันทึกข้อมูล";
+        });
+    });
+</script>
+
+</body>
+</html>
