@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฟอร์มทำการสั่งซื้อร้านขายหนังสือการ์ตูน</title>
+    <link rel="stylesheet" href="Styles1.css">
+</head>
+<body>
+
+<h1>ฟอร์มทำการสั่งซื้อร้านขายหนังสือการ์ตูน</h1>
+
+<form action="https://sheetdb.io/api/v1/zeilqzqwmg2jg" method="post" id="shop-form" enctype="multipart/form-data">
+    <label for="name">ชื่อ - นามสกุล:</label>
+    <input type="text" id="name" name="name" placeholder="กรอกชื่อ-นามสกุล" required>
+
+    <label for="book">ชื่อหนังสือ:</label>
+    <div id="book-selection">
+        <select name="book" class="book-dropdown" required>
+            <option value="">เลือกหนังสือ</option>
+            <option value="Bullet & Beast เล่ม 1">Bullet & Beast เล่ม 1 - 115.00 บาท</option>
+            <option value="เวทรักษาที่ไหนเขาใช้กันแบบนี้ เล่ม 4 (Mg)">เวทรักษาที่ไหนเขาใช้กันแบบนี้ เล่ม 4 (Mg) - 175.00 บาท</option>
+            <option value="Your Name. เธอคือ...(Manga) 2 + Earthbound">Your Name. เธอคือ...(Manga) 2 + Earthbound - 360.00 บาท</option>
+            <option value="Suzume การผนึกประตูของซุซุเมะ 1 (Mg)">Suzume การผนึกประตูของซุซุเมะ 1 (Mg) - 140.00 บาท</option>
+            <option value="ขอต้อนรับสู่ห้องเรียนนิยม (เฉพาะ) ยอดคน ปี 2 เล่ม 3 (Mg)">ขอต้อนรับสู่ห้องเรียนนิยม (เฉพาะ) ยอดคน ปี 2 เล่ม 3 (Mg) - 175.00 บาท</option>
+            <option value="ชีวิตไม่ง่ายของนางร้าย LV99 เล่ม 4 (Mg)">ชีวิตไม่ง่ายของนางร้าย LV99 เล่ม 4 (Mg) - 175.00 บาท</option>
+            <option value="เกิดใหม่เป็นขุนนางขึ้นเป็นใหญ่ด้วยสกิล เล่ม 6">เกิดใหม่เป็นขุนนางขึ้นเป็นใหญ่ด้วยสกิล เล่ม 6 - 125.00 บาท</option>
+            <option value="เกิดใหม่เป็นท่านลอร์ดมาบุกเบิกดินแดน เล่ม 9 จบ">เกิดใหม่เป็นท่านลอร์ดมาบุกเบิกดินแดน เล่ม 9 จบ - 95.00 บาท</option>
+            <option value="ไอน์ ซอฟ กับโลกแห่งขีดจำกัด เล่ม 1">ไอน์ ซอฟ กับโลกแห่งขีดจำกัด เล่ม 1 - 115.00 บาท</option>
+            <option value="นางกำนัลมือสังหารแห่งวังหลัง เล่ม 1">นางกำนัลมือสังหารแห่งวังหลัง เล่ม 1 - 110.00 บาท</option>
+            <option value="พ่อบ้านสุดแกร่งไร้เทียมทาน เล่ม 1">พ่อบ้านสุดแกร่งไร้เทียมทาน เล่ม 1 - 110.00 บาท</option>
+            <option value="Suzume การผนึกประตูของซุซุเมะ เล่ม 3 (จบ)(Mg)">Suzume การผนึกประตูของซุซุเมะ เล่ม 3 (จบ)(Mg) - 175.00 บาท</option>
+            <option value="Weathering With You ฤดูฝัน ฉันมีเธอ เล่ม 1 Mg">Weathering With You ฤดูฝัน ฉันมีเธอ เล่ม 1 Mg - 145.00 บาท</option>
+            <option value="Weathering With You ฤดูฝัน ฉันมีเธอ เล่ม 2 Mg">Weathering With You ฤดูฝัน ฉันมีเธอ เล่ม 2 Mg - 145.00 บาท</option>
+            <option value="Weathering With You ฤดูฝัน ฉันมีเธอ เล่ม 3 ฉบับจบ Mg">Weathering With You ฤดูฝัน ฉันมีเธอ เล่ม 3 ฉบับจบ Mg - 145.00 บาท</option>
+            <option value="Your name. เธอคือ เล่ม 3 (บาร์ใหม่) (Mg)">Your name. เธอคือ เล่ม 3 (บาร์ใหม่) (Mg) - 135.00 บาท</option>
+            <option value="สายลับซินเดอเรลลากับนักฆ่าคลั่งรัก เล่ม 2 (Mg)">สายลับซินเดอเรลลากับนักฆ่าคลั่งรัก เล่ม 2 (Mg) - 175.00 บาท</option>
+            <option value="เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่ม 24">เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่ม 24 -125.00 บาท</option>
+            <option value="รักครั้งนี้มีคนนกเยอะไปมั้ย เล่ม 1">รักครั้งนี้มีคนนกเยอะไปมั้ย เล่ม 1 - 135.00 บาท</option>
+            <option value="อ่านชะตาวันสิ้นโลก 1 (Mg)">อ่านชะตาวันสิ้นโลก 1 (Mg) - 495.00 บาท</option>
+        </select>
+    </div>
+    <button type="button" id="add-book">เพิ่ม</button>
+
+    <label for="money_price">ราคา+ค่าจัดส่ง50บาท:</label>
+    <input type="text" id="money_price" name="money_price" placeholder="กรอกราคาหนังสือทั้งหมด+ค่าจัดส่ง50บาท" readonly required>
+
+    <label for="phone_number">เบอร์โทร:</label>
+    <input type="tel" id="phone_number" name="phone_number" placeholder="กรอกเบอร์โทรการติดต่อ" pattern="[0-9]{10}" required>
+
+    <label for="address">ที่อยู่การจัดส่ง:</label>
+    <textarea id="address" name="address" rows="4" style="width: 100%;" placeholder="กรอกที่อยู่การจัดส่งสินค้า" required></textarea>
+
+    <h2>โอนเงินการสั่งซื้อ(เลือกบัญชีการโอน)</h2>
+    <ul>
+        <li>ธนาคาร กสิกรไทย</li>
+        <li>เลขที่บัญชี 1234567890</li>
+        <li>ชื่อ สมชาย ใจดี</li>
+        <li>ธนาคาร กรุงไทย</li>
+        <li>เลขที่บัญชี 0123456789</li>
+        <li>ชื่อ สมชาย ใจดี</li>
+    </ul>
+
+    <label for="date_money">วันที่จ่ายเงิน:</label>
+    <input type="date" id="date_money" name="date_money" required>
+
+    <label for="time_money">เวลาจ่ายเงิน:</label>
+    <input type="time" id="time_money" name="time_money" required>
+
+    <label for="payment_slip">แนบสลิปการโอนเงิน:</label>
+    <li><a href="https://line.me/th/" class="nav-link" target="_blank">ส่งสลิปการโอนเงิน</a></li>
+
+    <h2>ข้อกำหนดการสั่งซื้อ</h2>
+    <ul>
+        <li>กรุณาใส่ข้อมูลให้เรียบร้อย</li>
+        <li>ตรวจสอบข้อมูลให้ถูกต้อง</li>
+        <li>หากใส่ข้อมูลผิดทางร้านจะไม่รับผิดชอบต่อความเสียหายทั้งหมด</li>
+        <li>กรุณาเก็บสลิปการโอนเงินเพื่อเป็นหลักฐานการสั่ง</li>
+        <li>ส่งสลิปการโอนเงินแล้วแจ้งที่เบอร์โทรด้วยครับ</li>
+    </ul>
+
+    <button type="submit">ทำการสั่งซื้อ</button>
+</form>
+
+<div id="form-message" style="display: none;"></div>
+
+<script src="script1.js"></script>
+
+</body>
+</html>
